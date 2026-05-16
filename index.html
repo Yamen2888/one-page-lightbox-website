@@ -1,20 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap 4 Project</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Bootstrap 4 CSS -->
-<link rel="stylesheet" href="https://jsdelivr.net">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Page Lightbox Website</title>
+<!-- Correct Bootstrap 5 CDN Link -->
+<link href="https://jsdelivr.net" rel="stylesheet">
+<style>
+.gallery-img {
+max-width: 100%;
+height: auto;
+cursor: pointer;
+transition: 0.3s;
+}
+.gallery-img:hover {
+opacity: 0.8;
+}
+</style>
 </head>
 <body>
 
 <div class="container text-center mt-5">
-<h1 class="display-4">Welcome to My Bootstrap Site</h1>
-<p class="lead">This is my assignment for Bootstrap 4.</p>
-<button type="button" class="btn btn-primary">Click Me!</button>
+<h1 class="display-4 mb-4">Welcome to My Bootstrap Site</h1>
+<p class="lead">Click on the image below to open the Lightbox viewer.</p>
+
+<!-- Image Section -->
+<div class="row justify-content-center mt-4">
+<div class="col-md-6">
+<img src="https://unsplash.com" class="img-fluid rounded gallery-img" alt="Sample Image" data-bs-toggle="modal" data-bs-target="#lightboxModal">
+</div>
+</div>
 </div>
 
+<!-- Bootstrap Lightbox Modal -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content bg-dark border-0">
+<div class="modal-body text-end p-2">
+<button type="button" class="btn-close btn-close-white mb-2" data-bs-dismiss="modal" aria-label="Close"></button>
+<img src="https://unsplash.com" class="img-fluid rounded w-100" alt="Enlarged Image">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Correct Bootstrap 5 JS Bundle Link -->
+<script src="https://jsdelivr.net"></script>
 </body>
 </html>
